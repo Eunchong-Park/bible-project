@@ -82,7 +82,125 @@ button:active{
 .fa-twitter {
     font-size: 1.5rem;
 }
+/* Dropdown for Nav */
+.dropholder {
+  width: 150px;
+  height: 30px;
+  margin: 0px auto;
+  border-radius: 10px;
+  display: inline-flex;
+  float: left;
+  /* font: 18px arial; */
+  color: #fff;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid "black";
+  /* position: relative; */
+}
 
+p {
+  line-height: 30px;
+  font-size: 15px;
+  margin: 0;
+}
+
+.dropdown,
+.dropholder {
+  background: -webkit-linear-gradient(#333, #330101);
+  background: -moz-linear-gradient(#333, #363636);
+  background: -ms-linear-gradient(#333, #363636);
+  background: -o-linear-gradient(#333, #363636);
+  background: linear-gradient(#333, #363636);
+}
+
+.dropdown {
+  float: left;
+  width: 108px;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 30px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 18px;
+}
+.dropdown:hover {
+  background: -webkit-linear-gradient(#333, rgb(255, 121, 121));
+  background: -moz-linear-gradient(#333, rgb(255, 121, 121));
+  background: -ms-linear-gradient(#333, rgb(255, 121, 121));
+  background: -o-linear-gradient(#333, rgb(255, 121, 121));
+  background: linear-gradient(#333, rgb(255, 121, 121));
+}
+.dropdown:after {
+  content: "▾";
+  font-size: 10px;
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  display: block;
+}
+.dropdown.active + .dropdownMenu {
+  display: block;
+}
+
+.dropdownMenu {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  right: 0;
+  margin: 0;
+  cursor: pointer;
+  display: none;
+  background: -webkit-linear-gradient(#333, rgb(109, 2, 2));
+  background: -moz-linear-gradient(#333, rgb(109, 2, 2));
+  background: -ms-linear-gradient(#333, rgb(109, 2, 2));
+  background: -o-linear-gradient(#333, rgb(109, 2, 2));
+  background: linear-gradient(#333, rgb(109, 2, 2));
+  border: 2px solid gray;
+  border-radius: 10px;
+  z-index: 5;
+  overflow: hidden;
+}
+.dropdownMenu li {
+  padding: 2px 5px;
+  font-size: 13px;
+  border-bottom: 1px dotted #fff;
+  color: #e8f8ff;
+  list-style: none;
+}
+.dropdownMenu li:hover {
+  background: #1c4eac;
+}
+.dropdownMenu li:last-child {
+  border: none;
+}
+
+Nav {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+/* Input box */
+:focus{outline: none;}
+
+.col-3{float: left; width: 14%; margin: 10px 5%; position: relative;} /* necessary to give position: relative to parent. */
+input[type="text"]{font: 13px/12px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+.effect-8 ~ .focus-border:before,
+.effect-8 ~ .focus-border:after{content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #3399FF; transition: 0.3s;}
+.effect-8 ~ .focus-border:after{top: auto; bottom: 0; left: auto; right: 0;}
+.effect-8 ~ .focus-border i:before,
+.effect-8 ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #3399FF; transition: 0.4s;}
+.effect-8 ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0;}
+.effect-8:focus ~ .focus-border:before,
+.effect-8:focus ~ .focus-border:after{width: 100%; transition: 0.3s;}
+.effect-8:focus ~ .focus-border i:before,
+.effect-8:focus ~ .focus-border i:after{height: 100%; transition: 0.4s;}
 /* Loader */
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
